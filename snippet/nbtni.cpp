@@ -1,0 +1,1 @@
+ll index = lower_bound(all(v), X) - v.begin();

@@ -1,0 +1,1 @@
+count(str.cbegin(), str.cend(), 'X');

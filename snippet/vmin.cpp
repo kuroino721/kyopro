@@ -1,0 +1,1 @@
+ll mn = *min_element(all(v));

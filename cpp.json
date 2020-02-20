@@ -1,0 +1,97 @@
+{
+    "ceil.cpp": {
+        "prefix": "ceil",
+        "body": "int ceil(int a, int b)\n{\n    if (a % b == 0)\n    {\n        return a / b;\n    }\n    else\n    {\n        return a / b + 1;\n    }\n}",
+        "description": "ceil"
+    },
+    "ctoi.cpp": {
+        "prefix": "ctoi",
+        "body": "ll i = c - 48;",
+        "description": "ctoi"
+    },
+    "eratos.cpp": {
+        "prefix": "eratos",
+        "body": "vector<ll> eratosthenes_sieve(ll n)\n{\n    vector<ll> table(n + 1, 0);\n    vector<ll> prime_list(0);\n    for (ll i = 2; i <= n; i++)\n    {\n        if (!table[i])\n        {\n            prime_list.push_back(i);\n            for (ll j = 2; j <= n / i; j++)\n            {\n                table[i * j] = 1;\n            }\n        }\n    }\n    return prime_list;\n}",
+        "description": "eratos"
+    },
+    "gcd.cpp": {
+        "prefix": "gcd",
+        "body": "ll gcd(ll a, ll b)\n{\n    if (b == 0)\n    {\n        return a;\n    }\n\n    return gcd(b, a % b);\n}",
+        "description": "gcd"
+    },
+    "issosu.cpp": {
+        "prefix": "issosu",
+        "body": "bool is_prime(int X)\n{\n    for (int i = 2; i <= int(sqrt(X)); i++)\n    {\n        if (X % i == 0)\n        {\n            return false;\n        }\n    }\n    return true;\n}",
+        "description": "issosu"
+    },
+    "issqrt.cpp": {
+        "prefix": "issqrt",
+        "body": "bool isSquare(ll N)\n{\n    if (ll(sqrt(N)) * ll(sqrt(N)) == N)\n    {\n        return true;\n    }\n    else\n    {\n        return false;\n    }\n}",
+        "description": "issqrt"
+    },
+    "kakuinowa.cpp": {
+        "prefix": "kakuinowa",
+        "body": "ll sum_of_digits(ll num)\n{\n    ll sum = 0;\n    while (num)\n    {\n        sum += num % 10;\n        num /= 10;\n    }\n    return sum;\n}",
+        "description": "kakuinowa"
+    },
+    "mojicnt.cpp": {
+        "prefix": "mojicnt",
+        "body": "count(str.cbegin(), str.cend(), 'X');",
+        "description": "mojicnt"
+    },
+    "nbtni.cpp": {
+        "prefix": "nbtni",
+        "body": "ll index = lower_bound(all(v), X) - v.begin();",
+        "description": "nbtni"
+    },
+    "nbtnv.cpp": {
+        "prefix": "nbtnv",
+        "body": "ll value = *lower_bound(all(v), X);",
+        "description": "nbtnv"
+    },
+    "pairsort.cpp": {
+        "prefix": "pairsort",
+        "body": "bool pairCompare(const P &firstElof, const P &secondElof)\n{\n    return firstElof.second > secondElof.second;\n}\n\nsort(all(v), pairCompare);",
+        "description": "pairsort"
+    },
+    "set.cpp": {
+        "prefix": "set",
+        "body": "vector<ll> set_product(vector<ll> v1, vector<ll> v2)\n{\n    vector<ll> ret(0);\n    for (ll i : v1)\n    {\n        if (find(v2.begin(), v2.end(), i) != v2.end())\n        {\n            ret.push_back(i);\n        }\n    }\n    return ret;\n}",
+        "description": "set"
+    },
+    "sort.cpp": {
+        "prefix": "sort",
+        "body": "sort(all(v), greater<ll>());",
+        "description": "sort"
+    },
+    "stov.cpp": {
+        "prefix": "stov",
+        "body": "vector<char> v(all(s));",
+        "description": "stov"
+    },
+    "template.cpp": {
+        "prefix": "template",
+        "body": "#include <iostream>\n#include <cstdio>\n#include <cstdlib>\n#include <cstring>\n#include <algorithm>\n#include <string>\n#include <sstream>\n#include <complex>\n#include <vector>\n#include <list>\n#include <queue>\n#include <deque>\n#include <stack>\n#include <map>\n#include <set>\n#include <iterator>\n#include <numeric>\n#include <bitset>\n#include <cassert>\n#include <functional>\n\nusing namespace std;\nusing Graph = vector<vector<int>>;\ntypedef long long ll;\ntypedef pair<ll, ll> P;\ninline ll min(ll x, ll y) { return x < y ? x : y; }\ninline ll max(ll x, ll y) { return x > y ? x : y; }\n\n#define EPS (1e-7)\n#define INF (1e9)\n#define PI (acos(-1))\n#define rep(i, n) for (int i = 0; i < (int)(n); i++)\n#define rep1(i, n) for (int i = 1; i < (int)(n); i++)\n#define all(c) c.begin(), c.end()\n#define pb push_back\n#define fs first\n#define sc second\n#define show(x) cout << #x << \" = \" << (x) << endl\n#define chmin(x, y) x = min(x, y)\n#define chmax(x, y) x = max(x, y)\n\nint main()\n{\n\n    return 0;\n}",
+        "description": "template"
+    },
+    "tobin.cpp": {
+        "prefix": "tobin",
+        "body": "string s = bitset<10>(j).to_string();",
+        "description": "tobin"
+    },
+    "vmax.cpp": {
+        "prefix": "vmax",
+        "body": "ll mx = *max_element(all(v));",
+        "description": "vmax"
+    },
+    "vmin.cpp": {
+        "prefix": "vmin",
+        "body": "ll mn = *min_element(all(v));",
+        "description": "vmin"
+    },
+    "vtotal.cpp": {
+        "prefix": "vtotal",
+        "body": "ll total = accumulate(all(v), (ll)0);",
+        "description": "vtotal"
+    }
+}

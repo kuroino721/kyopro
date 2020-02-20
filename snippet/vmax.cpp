@@ -1,0 +1,1 @@
+ll mx = *max_element(all(v));

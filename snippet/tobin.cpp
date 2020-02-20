@@ -1,0 +1,1 @@
+string s = bitset<10>(j).to_string();
