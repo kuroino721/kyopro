@@ -1,1 +1,0 @@
-ll value = *lower_bound(all(v), X);

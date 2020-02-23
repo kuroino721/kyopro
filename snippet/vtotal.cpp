@@ -1,1 +1,0 @@
-ll total = accumulate(all(v), (ll)0);
