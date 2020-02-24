@@ -1,3 +1,4 @@
+//template start
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
@@ -241,6 +242,9 @@ ll vsum(vector<ll> v)
 {
     return accumulate(all(v), (ll)0);
 }
+
+//template end
+
 int main()
 {
 

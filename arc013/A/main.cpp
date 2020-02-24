@@ -215,17 +215,26 @@ int main()
 {
     vector<ll> nml(3);
     vector<ll> pqr(3);
-    ll product_nml = 1, product_pqr = 1;
     rep(i, 3)
     {
         cin >> nml[i];
-        product_nml *= nml[i];
     }
     rep(i, 3)
     {
         cin >> pqr[i];
-        product_pqr *= pqr[i];
     }
-    cout << product_nml / product_pqr << endl;
+    ll tmp;
+    ll mx = 0;
+    sort(all(pqr));
+    do
+    {
+        tmp = 1;
+        rep(i, 3)
+        {
+            tmp *= nml[i] / pqr[i];
+        }
+        chmax(mx, tmp);
+    } while (next_permutation(all(pqr)));
+    cout << mx << endl;
     return 0;
 }
